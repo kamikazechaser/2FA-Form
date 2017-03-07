@@ -1,5 +1,8 @@
 {
   "name": "2fa-form",
+  "scripts": {
+    "start": "node server.js"
+  },  
   "dependencies": {
     "body-parser": "^1.17.1",
     "cors": "^2.8.1",
