@@ -5,9 +5,9 @@ To get started:
 3. cd into the folder (in Windows open the folder and hold shift + right-click, then open command window here)
 4. Run the following command in order:
 
-   `npm install -g bower`
-   `npm install`
-   `bower install`
+  - `npm install -g bower`
+  - `npm install`
+  - `bower install`
 
 5. Edit `config.js` file and enter your own value between the quotes
 6. Finally run `npm start`
