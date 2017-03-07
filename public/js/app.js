@@ -121,11 +121,3 @@ function checkCvvFieldLength(elem) {
     elem.value = elem.value.slice(0, 3);
   }
 }
-
-// Validate Personal Nummer
-function checkPnFieldLength(elem) {
-  var i = elem.value.match(/.{1,2}/g);
-  if (i[3] == '' || i[4] == '' || i[5] == '') {
-    console.log('error')
-  }
-}
