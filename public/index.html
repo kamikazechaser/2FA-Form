@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html ng-app="Checkout">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+  <title>Payments</title>
+  
+  <link rel="stylesheet" media=all href="css/style.css">
+  <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Quicksand">
+  <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Passion+One">
+  <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+</head>
+
+<body>
+  <div class="container" ng-controller=PaymentsCtrl>
+
+    <h1>Tvåfaktorsautentisering för Sweden Apps</h1>
+
+    <form name="cardForm" ng-submit="processForm()">
+
+    <span class="fieldRow">
+    <input name="email" type="email" placeholder="" ng-model="card.email" ng-required="true" />
+    <label class="click-through" for="name">E-mail</label>
+    <i for="name" class="fa fa-envelope"></i>
+    </span>
+
+    <span class="fieldRow">
+    <input class="swedish-number" name="nummer" type="text" ng-model="card.nummer" only-digits ng-required="true" />
+    <label class="click-through" for="name">Personal Nummer</label>
+    <i for="name" class="fa fa-id-card"></i>
+    </span>
+
+    <span class="fieldRow credit_card">
+    <input type="text" name="number" ng-model="card.number" payments-validate="card" payments-format="card" payments-type-model="type" ng-required="true" />
+    <label class="click-through" for="cc">Credit card number</label>
+    <i for="cc" class="fa fa-credit-card"></i>
+    </span>
+
+    <span class="fieldRow col2">
+    <input oninput="checkCvvFieldLength(this);" type="text" name="cvc" ng-model="card.cvc" payments-validate="cvc" payments-format="cvc" payments-type-model="type" ng-required="true" />
+    <label class="click-through" for="cvv">CVV</label>
+    <i for="cvv" class="fa fa-lock"></i> 
+    </span>
+
+    <span class="fieldRow col2 last">
+    <input oninput="checkNumberFieldLength(this);" type="text" name="expiry" ng-model="card.expiry" payments-validate="expiry" payments-format="expiry" payments-type-model="type" ng-required="true" class="active"/>
+    <label class="click-through" for="date">Date</label>
+    <i for="date" class="fa  fa-calendar"></i>
+    </span>
+
+    <button ng-cloak type="submit" ng-disabled="cardForm.$invalid" type="submit">AUTHORIZE DEVICE</button>
+
+    </form>
+
+  </div>
+
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/bower_components/cleave.js/dist/cleave.min.js"></script>
+  <script src="/bower_components/angular/angular.min.js"></script>
+  <script src="/bower_components/angular-payments/lib/angular-payments.min.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>

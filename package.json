@@ -1,0 +1,11 @@
+{
+  "name": "2fa-form",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.1",
+    "express": "^4.15.2",
+    "mailgun-js": "^0.8.2",
+    "morgan": "^1.8.1",
+    "rangi": "^1.0.1"
+  }
+}

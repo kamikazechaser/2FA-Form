@@ -1,0 +1,296 @@
+body {
+  background-color: #f4f7f9;
+}
+
+button[disabled=disabled],
+button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.click-through {
+  pointer-events: none;
+}
+
+input:required {
+    box-shadow:none;
+}
+
+@media (min-width:501px) {
+  .container {
+    width: 450px;
+    margin: 50px auto;
+    min-height: 200px;
+    padding: 50px;
+    text-align: center;
+    position: relative;
+  }
+  .container h1 {
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 40px;
+  }
+  .container p {
+    font-family: 'Quicksand', sans-serif;
+    color: #888;
+    margin-top: 50px;
+  }
+  .container .fieldRow {
+    position: relative;
+    display: inline-block;
+    width: 450px;
+    margin: 10px 0;
+  }
+  .container .fieldRow.col2 {
+    width: 210px;
+    float: left;
+  }
+  .container .fieldRow.last {
+    float: right;
+  }
+  .container .fieldRow.focus input {
+    outline: none;
+    border-color: #4aa9f2;
+    box-shadow: 0px 0px 2px 3px #edf2f6;
+    background-color: #FFF;
+  }
+
+  .container .fieldRow.focus input::-webkit-input-placeholder {
+    color: #8d9dac;
+  }
+  .container .fieldRow.focus input::-moz-placeholder {
+    color: #8d9dac;
+  }
+  .container .fieldRow.focus input::-ms-placeholder {
+    color: #8d9dac !important;
+  }
+  .container .fieldRow.focus input+label {
+    left: -100px;
+    opacity: 0;
+  }
+  .container .fieldRow.focus input+label+i {
+    opacity: 1;
+  }
+  .container .fieldRow.active input {
+    outline: none;
+    border-color: #d2dbe2;
+    box-shadow: none;
+    background-color: #ecf1f5;
+  }
+  .container .fieldRow.active input::-webkit-input-placeholder {
+    color: #8d9dac;
+  }
+  .container .fieldRow.active input::-moz-placeholder {
+    color: #8d9dac;
+  }
+
+  .container .fieldRow.active input+label {
+    left: -100px;
+    opacity: 0;
+  }
+  .container .fieldRow.active input+label+i {
+    opacity: 1;
+  }
+  .container .fieldRow.active .iconCheck {
+    color: #98a7b4 !important;
+  }
+  .container .fieldRow.credit_card {
+    transition: all 0.35s ease;
+  }
+  .container input {
+    display: inline-block;
+    padding: 8px 50px;
+    border-radius: 4px;
+    border: solid 2px #d2dbe2;
+    height: 55px;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    transition: all .3s ease-in-out;
+    color: #000;
+  }
+  .container input.credit_card_number {
+    padding-right: 100px;
+  }
+  .container input+label {
+    position: absolute;
+    display: inline-block;
+    top: 15px;
+    left: 18px;
+    color: #8d9dac;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    font-size: 18px;
+    opacity: 1;
+    transition: all 0.6s ease;
+  }
+  .container input::-webkit-input-placeholder {
+    color: #FFF;
+  }
+  .container input::-moz-placeholder {
+    color: #FFF;
+  }
+  .container i {
+    position: absolute;
+    left: 18px;
+    top: 17px;
+    opacity: 0;
+    color: #8d9dac;
+    font-size: 21px;
+  }
+  button[type="submit"] {
+    width: 450px;
+    margin: 18px 0;
+    background: transparent;
+    border: none;
+    background: #4aa9f2;
+    color: #FFF;
+    padding: 15px;
+    border-radius: 4px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    transition: all 0.35s ease;
+  }
+  button[type="submit"]:hover {
+    cursor: pointer;
+    background: #87D37C;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+    margin: 75px auto;
+    min-height: 200px;
+    text-align: center;
+    position: relative;
+  }
+  .container h1 {
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 40px;
+  }
+  .container p {
+    font-family: 'Quicksand', sans-serif;
+    color: #888;
+    margin-top: 50px;
+  }
+  .container .fieldRow {
+    position: relative;
+    display: inline-block;
+    width: 95%;
+    margin: 10px 0;
+  }
+  .container .fieldRow.col2 {
+    width: 95%;
+  }
+  .container .fieldRow.focus input {
+    outline: none;
+    border-color: #4aa9f2;
+    box-shadow: 0px 0px 2px 3px #edf2f6;
+    background-color: #FFF;
+  }
+  .container .fieldRow.focus input::-webkit-input-placeholder {
+    color: #8d9dac;
+  }
+  .container .fieldRow.focus input::-moz-placeholder {
+    color: #8d9dac;
+  }
+  .container .fieldRow.focus input::-ms-input-placeholder {
+    color: #8d9dac;
+  }
+  .container .fieldRow.focus input+label {
+    left: -100px;
+    opacity: 0;
+  }
+  .container .fieldRow.focus input+label+i {
+    opacity: 1;
+  }
+  .container .fieldRow.active input {
+    outline: none;
+    border-color: #d2dbe2;
+    box-shadow: none;
+    background-color: #ecf1f5;
+  }
+  .container .fieldRow.active input::-webkit-input-placeholder {
+    color: #8d9dac;
+  }
+  .container .fieldRow.active input::-moz-placeholder {
+    color: #8d9dac;
+  }
+  .container .fieldRow.active input::-ms-input-placeholder {
+    color: #8d9dac;
+  }
+  .container .fieldRow.active input+label {
+    left: -100px;
+    opacity: 0;
+  }
+  .container .fieldRow.active input+label+i {
+    opacity: 1;
+  }
+  .container .fieldRow.active .iconCheck {
+    color: #98a7b4 !important;
+  }
+  .container .fieldRow.credit_card {
+    transition: all 0.35s ease;
+  }
+  .container input {
+    display: inline-block;
+    padding: 8px 50px;
+    border-radius: 4px;
+    border: solid 2px #d2dbe2;
+    height: 55px;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    transition: all .3s ease-in-out;
+    color: #000;
+  }
+  .container input+label {
+    position: absolute;
+    display: inline-block;
+    top: 15px;
+    left: 18px;
+    color: #8d9dac;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    font-size: 18px;
+    opacity: 1;
+    transition: all 0.6s ease;
+  }
+  .container input::-webkit-input-placeholder {
+    color: #FFF;
+  }
+  .container input::-moz-placeholder {
+    color: #FFF;
+  }
+  .container input::-ms-input-placeholder {
+    color: #FFF;
+  }
+  .container i {
+    position: absolute;
+    left: 18px;
+    top: 17px;
+    opacity: 0;
+    color: #8d9dac;
+    font-size: 21px;
+  }
+  button[type="submit"] {
+    width: 95%;
+    margin: 18px 0;
+    background: transparent;
+    border: none;
+    background: #4aa9f2;
+    color: #FFF;
+    padding: 15px;
+    border-radius: 4px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    transition: all 0.35s ease;
+  }
+  button[type="submit"]:hover {
+    cursor: pointer;
+    background: #87D37C;
+  }
+}
